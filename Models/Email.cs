@@ -4,7 +4,7 @@ using sib_api_v3_sdk.Api;
 using sib_api_v3_sdk.Client;
 using sib_api_v3_sdk.Model;
 using System.ComponentModel.DataAnnotations;
-
+using Google.Cloud.RecaptchaEnterprise.V1;
 using sib_api_v3_sdk.Api;
 using sib_api_v3_sdk.Model;
 
@@ -29,7 +29,14 @@ namespace KBRPETS.Models {
         [BindProperty, Required] 
         public string Message { get; set; }
 
-        private readonly string apiKey = "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";
+
+        // Por propósitos de segurança, o Brevo desativa automáticamente a API quando
+        // a mesma é detectada no Github. A chave API foi enviada junto ao E-Mail
+        // para o processo seletivo.
+
+        // Se preferir, use o https://app.brevo.com/ para criar uma nova chave API em SMTP e API
+        // Após isso, cole a API-KEY aqui:
+        private readonly string apiKey = "API-KEY";
 
         public Email() {
         }
