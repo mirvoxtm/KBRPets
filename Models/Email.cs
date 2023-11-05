@@ -29,8 +29,7 @@ namespace KBRPETS.Models {
         [BindProperty, Required] 
         public string Message { get; set; }
 
-        private readonly string apiKey =
-            "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";
+        private readonly string apiKey = "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";
 
         public Email() {
         }
