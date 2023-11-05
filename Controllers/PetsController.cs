@@ -51,6 +51,7 @@ namespace KBRPETS.Controllers {
 
 
         // GET da Pagina de Integra
+        [Route("Integra/{id}/{name}")]
         public IActionResult Integra(int? id) {
 
             if (!id.HasValue)

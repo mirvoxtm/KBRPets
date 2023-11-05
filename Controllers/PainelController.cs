@@ -210,7 +210,7 @@ namespace KBRPETS.Controllers
             // Caso o Email não esteja vazio, encontre sua entrada
             // e pegue seus dados. Neste caso, Password será enviado pelo Email
             var thisUser = _usersService.FindByEmail(email);
-            if (!string.IsNullOrEmpty(thisUser.Email)) {
+            if (thisUser!= null && !string.IsNullOrEmpty(thisUser.Email)) {
 
                 Email emailS = new Email {
                     Username = thisUser.Name,
