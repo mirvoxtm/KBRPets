@@ -1,14 +1,14 @@
 # 🐶 KBRPets
-Processo seletivo de Estágio de Backend da KBRTec
+Processo seletivo de Estágio de Backend da KBRTec.
+Aplicação feita em ASP.NET 6.0 como informado pelo documento!
+Recomendo utilizar do Visual Studio para executar uma instância local da solução.
+
 > [!WARNING]  
 > Note que toda informação sensível disponível, tal como
 > conexão ao banco de dados é de natureza do processo seletivo
 > e do fato que o repositório necessita ser aberto para verificação do código.
 
 > Nunca mostre dados sensíveis em um repositório público!
-
-Aplicação feita em ASP.NET 6.0 como informado pelo documento!
-Recomendo utilizar do Visual Studio para executar uma instância local da solução.
 
 ## Página Principal
 - [x] Listagem dinâmica dos animais com status ativo 
