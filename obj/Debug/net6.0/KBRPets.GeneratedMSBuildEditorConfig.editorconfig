@@ -1,0 +1,97 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = KBRPETS
+build_property.RootNamespace = KBRPETS
+build_property.ProjectDir = C:\Users\Mirvox\source\repos\KBRPets\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Mirvox\source\repos\KBRPets
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Mirvox/source/repos/KBRPets/Views/Painel/cadastrar-pet.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFpbmVsXGNhZGFzdHJhci1wZXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Mirvox/source/repos/KBRPets/Views/Painel/cadastrar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFpbmVsXGNhZGFzdHJhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Mirvox/source/repos/KBRPets/Views/Painel/editar-pet.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFpbmVsXGVkaXRhci1wZXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Mirvox/source/repos/KBRPets/Views/Painel/editar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFpbmVsXGVkaXRhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Mirvox/source/repos/KBRPets/Views/Painel/inserir-pet.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFpbmVsXGluc2VyaXItcGV0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Mirvox/source/repos/KBRPets/Views/Painel/login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFpbmVsXGxvZ2luLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Mirvox/source/repos/KBRPets/Views/Painel/painel.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFpbmVsXHBhaW5lbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Mirvox/source/repos/KBRPets/Views/Painel/recuperar-senha.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFpbmVsXHJlY3VwZXJhci1zZW5oYS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Mirvox/source/repos/KBRPets/Views/Painel/solicitacoes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFpbmVsXHNvbGljaXRhY29lcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Mirvox/source/repos/KBRPets/Views/pets/enviado.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NccGV0c1xlbnZpYWRvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Mirvox/source/repos/KBRPets/Views/pets/formulario.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NccGV0c1xmb3JtdWxhcmlvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Mirvox/source/repos/KBRPets/Views/pets/index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NccGV0c1xpbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Mirvox/source/repos/KBRPets/Views/pets/integra.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NccGV0c1xpbnRlZ3JhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Mirvox/source/repos/KBRPets/Views/pets/quero-adotar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NccGV0c1xxdWVyby1hZG90YXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Mirvox/source/repos/KBRPets/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Mirvox/source/repos/KBRPets/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Mirvox/source/repos/KBRPets/Views/Shared/_LayoutLogin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Mirvox/source/repos/KBRPets/Views/Shared/_LayoutPanel.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRQYW5lbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Mirvox/source/repos/KBRPets/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Mirvox/source/repos/KBRPets/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 

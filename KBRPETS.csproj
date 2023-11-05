@@ -1,0 +1,79 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\css\style.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="C:\Users\Mirvox\source\repos\KBRPets\Models\.editorconfig" />
+    <None Include="wwwroot\css\style.css" />
+    <None Include="wwwroot\img\banner.png" />
+    <None Include="wwwroot\img\banner.webp" />
+    <None Include="wwwroot\img\cartoon-cat-2.jpg" />
+    <None Include="wwwroot\img\cartoon-cat-2.webp" />
+    <None Include="wwwroot\img\cartoon-cat-3.jpg" />
+    <None Include="wwwroot\img\cartoon-cat-3.webp" />
+    <None Include="wwwroot\img\cartoon-cat.jpg" />
+    <None Include="wwwroot\img\cartoon-cat.webp" />
+    <None Include="wwwroot\img\cartoon-dog.jpg" />
+    <None Include="wwwroot\img\cartoon-dog.webp" />
+    <None Include="wwwroot\img\favicon.ico" />
+    <None Include="wwwroot\img\kbrtec.png" />
+    <None Include="wwwroot\img\kbrtec.webp" />
+    <None Include="wwwroot\img\logo.png" />
+    <None Include="wwwroot\img\logo.webp" />
+    <None Include="wwwroot\painel\css\style.css" />
+    <None Include="wwwroot\painel\img\favicon.ico" />
+    <None Include="wwwroot\painel\img\kbrtec.png" />
+    <None Include="wwwroot\painel\img\kbrtec.webp" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Google.Cloud.RecaptchaEnterprise.V1" Version="2.5.0" />
+    <PackageReference Include="itext7" Version="8.0.2" />
+    <PackageReference Include="itext7.bouncy-castle-adapter" Version="8.0.2" />
+    <PackageReference Include="LazZiya.TagHelpers" Version="6.0.2" />
+    <PackageReference Include="MailKit" Version="4.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.13">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.23" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.13">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.16" />
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="7.0.0" />
+    <PackageReference Include="sib_api_v3_sdk" Version="4.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Views\Painel\painel.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Views\Painel\cadastrar-pet.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\Painel\painel.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\pets\enviado.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Views\pets\enviado.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Views\Painel\cadastrar-pet.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EditorConfigFiles Remove="C:\Users\Mirvox\source\repos\KBRPets\Models\.editorconfig" />
+  </ItemGroup>
+
+</Project>

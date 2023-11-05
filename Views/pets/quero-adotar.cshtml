@@ -1,0 +1,201 @@
+﻿@using KBRPETS.Models.Enums
+@model IEnumerable<Pet>
+
+@{
+    Layout = "_Layout";
+}
+
+<body>
+<section>
+<div class="container-fluid">
+<div class="row">
+<aside style="width: 320px;">
+    <form asp-action="Search" method="post" class="bg-custom rounded p-3 text-uppercase pt-4 mt-2 position-sticky" style="top: 1rem;">
+        <div class="mb-3 text-light bowlby-one">
+            Filtros
+        </div>
+
+        <div class="form-group py-2">
+            <label for="especie" class="text-capitalize text-light">Espécie</label>
+            <select name="especie" asp-items="@Html.GetEnumSelectList<SpeciesEnum>()" id="especie" class="form-control form-select">
+                <option value="" selected disabled>Selecione</option>
+            </select>
+        </div>
+
+        <div class="form-group py-2">
+            <label for="raca" class="text-capitalize text-light">Raça</label>
+            <input type="text" class="form-control" name="raca" id="raca" placeholder="Ex: Labrador">
+        </div>
+
+        <div class="form-group py-2">
+            <label for="local" class="text-capitalize text-light">Local</label>
+            <input type="text" class="form-control" name="local" id="local" placeholder="Ex: São Paulo">
+        </div>
+
+        <div class="form-group py-2">
+            <label for="porte" class="text-capitalize text-light">Porte</label>
+            <select name="porte" asp-items="@Html.GetEnumSelectList<PortEnum>()" id="porte" class="form-control form-select">
+                <option value="" selected disabled>Selecione</option>
+            </select>
+        </div>
+
+        <div class="form-group py-2">
+            <div class="w-100 text-capitalize text-light">Sexo</div>
+            <div class="bg-light p-2 rounded d-flex flex-wrap row-gap-2">
+                @foreach (var item in (GenderEnum[]) Enum.GetValues(typeof(GenderEnum)))
+                {
+                    var id = Enum.GetName(typeof(GenderEnum), item);
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="sexo" id="@id" value="@item">
+                        <label class="form-check-label text-capitalize" for="@id">@id</label>
+                    </div>
+                }
+            </div>
+        </div>
+
+        <div class="form-group d-flex justify-content-end">
+            <button type="submit" class="btn btn-custom-2 mt-4">Buscar</button>
+        </div>
+    </form>
+</aside>
+
+<main class="bg-light p-4 pb-5 col">
+<h2 class="h4 py-2 pb-0 text-uppercase m-0 bowlby-one">Quero Adotar</h2>
+<p class="m-0 pb-2">Conheça os pets disponíveis para adoção</p>
+
+    <div class="row row-gap-4 mt-4">
+
+    <!-- Iterando pela Lista de Pets -->
+    
+ @if (Model.Any())
+ {
+     @foreach (Pet pet in Model)
+     {
+         if(pet.Active == true) {
+         // Separando dados de cada Lista para dados individuais.
+
+         List<string> images = pet.Images.Split(',').ToList();
+         List<string> location = pet.Location.Split(',').ToList();
+
+             <div class="col-xxl-3 col-4">
+                 <div class="card rounded overflow-hidden">
+                     <a asp-action="Integra" asp-controller="pets" asp-route-name="@pet.Name" asp-route-id="@pet.Id">
+
+
+                         @if (images != null && images.Any() && !string.IsNullOrEmpty(images[0]))
+                         {
+
+                             // Caso haja um link válido em images, mostre-o.
+                             <img src="~/@images[0]" alt="" class="w-100 object-fit-cover" height="320">
+                         }
+
+                         else
+                         {
+                             // Caso contrário, mostre uma imagem de Failsafe baseada na espécie do animal.
+
+                             if (pet.Species == SpeciesEnum.GATO)
+                             {
+                                 <img src="~/img/cartoon-cat.jpg" alt="" class="w-100 object-fit-cover" height="320">
+                             }
+                             else if (pet.Species == SpeciesEnum.CACHORRO)
+                             {
+                                 <img src="~/img/cartoon-dog.jpg" alt="" class="w-100 object-fit-cover" height="320">
+                             }
+                             else if (pet.Species == SpeciesEnum.AVE)
+                             {
+                                 <img src="~/img/cartoon-cat-2.jpg" alt="" class="w-100 object-fit-cover" height="320">
+                             }
+                         }
+
+                     </a>
+
+                     <div class="p-3">
+                         <p class="m-0 fs-sm">Cód. @Html.DisplayFor(model => pet.Id)</p>
+
+                         <div class="d-flex align-items-center gap-2 mt-2 py-2">
+                             <h3 class="h4 m-0">@Html.DisplayFor(model => pet.Name)</h3>
+
+                             @{
+                                 if (pet.Gender == GenderEnum.MACHO)
+                                 {
+                                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-gender-male" viewBox="0 0 16 16">
+                                         <path fill="#006AB0" fill-rule="evenodd" d="M9.5 2a.5.5 0 0 1 0-1h5a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-1 0V2.707L9.871 6.836a5 5 0 1 1-.707-.707L13.293 2H9.5zM6 6a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"/>
+                                     </svg>
+                                 }
+                                 else
+                                 {
+                                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-gender-female" viewBox="0 0 16 16">
+                                         <path fill="#FF7373" fill-rule="evenodd" d="M8 1a4 4 0 1 0 0 8 4 4 0 0 0 0-8zM3 5a5 5 0 1 1 5.5 4.975V12h2a.5.5 0 0 1 0 1h-2v2.5a.5.5 0 0 1-1 0V13h-2a.5.5 0 0 1 0-1h2V9.975A5 5 0 0 1 3 5z"/>
+                                     </svg>
+                                 }
+                             }
+
+
+                         </div>
+                         <p class="mb-4 fs-md">@Html.DisplayFor(model => location[0]), @Html.DisplayFor(model => location[1]) - @Html.DisplayFor(model => location[2])</p>
+
+
+                         <a asp-action="Integra" asp-controller="pets" asp-route-name="@pet.Name" asp-route-id="@pet.Id" class="btn btn-custom-2 d-flex align-items-center justify-content-center gap-2 w-100">
+                             Quero Adotar
+                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                                 <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                             </svg>
+                         </a>
+                     </div>
+                 </div>
+             </div>
+         }
+     }
+ } 
+    
+ else{
+     <div class="h-50 d-flex align-items-center justify-content-center card rounded " style="background-color: #FFECCE;">
+        <img src="~/img/cartoon-cat-3.webp" alt="Gato" width="150">
+        <p>Desculpe, não encontramos nenhum Pet!</p>
+     </div>
+ }
+
+<nav class="mt-5">
+   <ul class="pagination justify-content-center">
+       @if (ViewBag.CurrentPage > 1)
+       {
+           <li class="page-item">
+               <a class="page-link btn-custom" href="@Url.Action("QueroAdotar", new { page = ViewBag.CurrentPage - 1, pageSize = ViewBag.PageSize })">Anterior</a>
+           </li>
+       }
+       @for (int i = 1; i <= ViewBag.TotalPages; i++)
+       {
+           <li class="page-item @(i == ViewBag.CurrentPage ? "active" : "")">
+               <a class="page-link btn-custom" href="@Url.Action("QueroAdotar", new { page = i, pageSize = ViewBag.PageSize })">@i</a>
+           </li>
+       }
+       @if (ViewBag.CurrentPage < ViewBag.TotalPages)
+       {
+           <li class="page-item">
+               <a class="page-link btn-custom" href="@Url.Action("QueroAdotar", new { page = ViewBag.CurrentPage + 1, pageSize = ViewBag.PageSize })">Próximo</a>
+           </li>
+       }
+   </ul>
+</nav>
+</div>
+</main>
+</div>
+</div>
+</section>
+
+<footer class="py-4">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center">
+            <p class="m-0">
+                Copyright © 2023. Todos os direitos reservados
+            </p>
+
+            <a href="https://www.kbrtec.com.br/" target="_blank" title="Acesse o site da KBR TEC">
+                <img src="~/img/kbrtec.webp" alt="KBRTEC" width="100">
+            </a>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+</body>
