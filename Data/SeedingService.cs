@@ -24,7 +24,7 @@ namespace KBRPETS.Data {
             {
                 Email = "admin@kbrtec.com.br",
                 Name = "Admin",
-                Password = "Admin@123",
+                Password = "*********",
                 Status = ActiveEnum.ATIVO,
             });
 
@@ -32,7 +32,7 @@ namespace KBRPETS.Data {
             {
                 Email = "testing@kbrtec.com.br",
                 Name = "Testing",
-                Password = "Teste@123",
+                Password = "***********",
                 Status = ActiveEnum.ATIVO,
             });
             
